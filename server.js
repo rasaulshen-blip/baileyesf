@@ -5,12 +5,12 @@ import pino from "pino";
 import qrcode from "qrcode";
 // import makeWASocket from "@whiskeysockets/baileys";
 
-const {
-  default: makeWASocket,
+import makeWASocket, {
   DisconnectReason,
   useMultiFileAuthState,
   fetchLatestBaileysVersion,
-} = require("@whiskeysockets/baileys");
+} from "@whiskeysockets/baileys";
+
 
 const app = express();
 app.use(cors());
@@ -415,5 +415,6 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   logger.info(`Baileys server listening on :${PORT}`);
 });
+
 
 
