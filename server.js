@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
-const express = require("express");
-const cors = require("cors");
-const pino = require("pino");
-const qrcode = require("qrcode");
+import express from "express";
+import cors from "cors";
+import pino from "pino";
+import qrcode from "qrcode";
+import makeWASocket from "@whiskeysockets/baileys";
 
 const {
   default: makeWASocket,
@@ -414,3 +415,4 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   logger.info(`Baileys server listening on :${PORT}`);
 });
+
